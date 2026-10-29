@@ -1,0 +1,27 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Audit logs and giveaway results (contains private member data)
+results/
+*.txt
+!requirements.txt
+
+# Playwright artifacts
+.playwright/
+
+# IDE & Editor settings
+.vscode/
+.idea/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
