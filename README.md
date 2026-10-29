@@ -1,5 +1,9 @@
 # 🎁 Facebook Group Giveaway Winner Picker
 
+[![Developer: Nomer Israel](https://img.shields.io/badge/Developer-Nomer%20Israel-blue?logo=github)](https://github.com/nmrisrl11)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-orange?logo=buy-me-a-coffee)](https://buymeacoffee.com/nmrisrl11)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 An automated, fair, and reliable Python tool to pick giveaway winners from Facebook group posts—including **private groups**—by attaching directly to your active browser session via the **Chrome DevTools Protocol (CDP)**.
 
 ---
@@ -32,8 +36,8 @@ Instead of logging in headlessly, it connects to your **already open and logged-
 
 - **OS**: Windows 10 / 11
 - **Python**: 3.10 or newer
-- **Browser**: [Brave Browser](https://brave.com/) (or Google Chrome)
-- **Git**: Installed for cloning/pushing
+- **Browser**: [Brave Browser](https://brave.com/), [Google Chrome](https://www.google.com/chrome/), or [Microsoft Edge](https://www.microsoft.com/edge)
+- **Git**: Installed for version control
 
 ---
 
@@ -58,26 +62,23 @@ python -m venv .venv
 
 ## 🎮 How to Run
 
-### Method A: 1-Click Launchers (Windows)
+### Method A: 1-Click Automated Runner (Zero Setup!)
 
-1. **Close all open Brave windows**.
-2. Double-click **`start_brave_with_debugging.bat`**  
-   *(Launches Brave with remote debugging on localhost port `9222`).*
-3. Ensure you are logged into Facebook in that Brave window.
-4. Double-click **`run_picker.bat`**.
+Simply double-click **`run_picker.bat`**.
+
+The script will:
+1. Check if your browser is already active on debug port `9222`.
+2. If not, auto-detect your installed browsers (**Brave**, **Google Chrome**, **Microsoft Edge**) and ask which one has your active Facebook login.
+3. Automatically launch (or restart) the browser with remote debugging enabled.
+4. Prompt you for the giveaway details and pick your winners automatically!
 
 ---
 
-### Method B: Terminal / Command Line
+### Method B: Manual Browser Launch (Optional Utility)
 
-1. Start Brave with debugging enabled:
-   ```cmd
-   "C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --remote-debugging-port=9222
-   ```
-2. Run the picker script:
-   ```powershell
-   .venv\Scripts\python giveaway_picker.py
-   ```
+If you prefer to start your browser in debug mode first:
+- Double-click **`start_browser_debug.bat`** (select Brave, Chrome, or Edge).
+- Then run **`run_picker.bat`** (or `.venv\Scripts\python giveaway_picker.py`).
 
 ---
 
@@ -132,7 +133,7 @@ facebook-giveaway-picker/
 ├── .venv/                          # Python virtual environment (ignored by Git)
 ├── results/                        # Generated audit reports (ignored by Git)
 ├── giveaway_picker.py              # Main automation & winner selection script
-├── start_brave_with_debugging.bat  # 1-click launcher for Brave with remote debugging
+├── start_browser_debug.bat         # Optional 1-click launcher for Brave/Chrome/Edge with remote debugging
 ├── run_picker.bat                  # 1-click launcher for the Python script
 ├── requirements.txt                # Python package dependencies (Playwright)
 ├── .gitignore                      # Prevents committing venv, caches, and audit logs
@@ -146,6 +147,15 @@ facebook-giveaway-picker/
 - Remote debugging port `9222` only listens on `127.0.0.1` (**localhost**). It is never exposed to the local network or internet.
 - Whenever you close Brave and reopen it from your normal shortcut, remote debugging is **automatically disabled**.
 - All winner logs saved in `results/` are ignored by `.gitignore` to keep participant identities private.
+
+---
+
+## ☕ Support & Developer
+
+Developed with ❤️ by **Nomer Israel**
+- **GitHub**: [@nmrisrl11](https://github.com/nmrisrl11)
+- **Support**: If this tool helped make your giveaways faster and easier, consider buying me a coffee:  
+  👉 **[Buy Me a Coffee](https://buymeacoffee.com/nmrisrl11)**
 
 ---
 

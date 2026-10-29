@@ -4,6 +4,7 @@ cd /d "%~dp0"
 
 echo =======================================================
 echo           FACEBOOK GIVEAWAY WINNER PICKER
+echo      Developed by Nomer Israel (@nmrisrl11)
 echo =======================================================
 echo.
 
